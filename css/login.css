@@ -1,53 +1,87 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background-image: url('../Images/background.jpg'); 
     background-size: cover;
     background-position: center;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
-.menu-container {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    z-index: 99;
 }
 
-.menu {
-    display: none;
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
 }
 
-.menu.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #007bff; 
-    width: 150px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-}
-
-.menu a {
-    padding: 10px;
+.navigation .links {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
     text-decoration: none;
-    color: white;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    margin-left: 40px;
+   
 }
 
-.menu a:hover {
-    background-color: #0056b3; 
+.navigation .links::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation .links:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .button {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 6px 15px;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.navigation .button:hover {
+    background: #fff;
+    color: #007bff;
+    text-decoration: none;
 }
 
 section#login {
@@ -91,41 +125,4 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #210fc5;
-}
-
-.hamburger {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-}
-
-.hamburger .line-1,
-.hamburger .line-2,
-.hamburger .line-3 {
-    width: 100%;
-    height: 2px;
-    background-color: #007bff; 
-    margin: 4px 0; 
-    transition: transform 0.4s; 
-}
-
-.hamburger.active .line-1 {
-    transform: translateY(9.6px) rotate(45deg);
-}
-
-.hamburger.active .line-2 {
-    transform: rotate(45deg);
-}
-
-.hamburger.active .line-3 {
-    transform: translateY(-9.6px) rotate(-45deg);
 }
