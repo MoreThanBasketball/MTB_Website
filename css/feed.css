@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -43,49 +42,3 @@ h1 {
     margin: 0 auto 20px; 
     text-align: center; 
 }
-=======
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-}
-
-
-nav {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 0.5em;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.feed-container {
-    max-width: 600px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    margin: 20px auto;
-}
-
-h1 {
-    color: #333;
-}
-
-.instagram-post {
-    max-width: 100%;
-    margin: 0 auto 20px; 
-    text-align: center; 
-}
->>>>>>> 86ff28cbf96ad51b2951dc35fa535c647b5b0f45
