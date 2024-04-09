@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mtb-dev-267e2-authRole",
+      "UnauthRoleArn": "arn:aws:iam::471112567454:role/amplify-mtb-dev-267e2-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::471112567454:role/amplify-mtb-dev-267e2-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mtb-dev-267e2-deployment",
+      "UnauthRoleName": "amplify-mtb-dev-267e2-unauthRole",
+      "StackName": "amplify-mtb-dev-267e2",
+      "StackId": "arn:aws:cloudformation:us-east-1:471112567454:stack/amplify-mtb-dev-267e2/ffd4ea20-f634-11ee-bff5-0ebe575548f9",
+      "AmplifyAppId": "d35u4rsi9q8t2v"
+    },
+    "categories": {
+      "auth": {
+        "mtbcb25086c": {}
+      }
+    }
+  }
+}
