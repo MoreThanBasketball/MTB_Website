@@ -1,5 +1,3 @@
-
-
 var currentDate = new Date();
 var currentYear = currentDate.getFullYear();
 var currentMonth = currentDate.getMonth(); 
@@ -29,24 +27,26 @@ function displayCalendar(year, month) {
         var row = table.insertRow(i + 1);
         for (var j = 0; j < 7; j++) {
             var cell = row.insertCell(j);
-
+    
             if (i === 0 && j < firstDayOfMonth) {
                 cell.innerHTML = "";
             } else if (date <= daysInMonth) {
                 var dateCell = document.createElement("div");
                 dateCell.innerHTML = date;
-
+    
                 dateCell.addEventListener("click", function () {
                     var selectedDate = this.innerHTML;
                     document.getElementById("selected-date").innerText = selectedDate;
                     showTimeSlots();
+                    showInfoBox(this);
                 });
-
+    
                 cell.appendChild(dateCell);
                 date++;
             }
         }
     }
+    
 
     calendarContainer.innerHTML = "";
     calendarContainer.appendChild(table);
@@ -89,12 +89,49 @@ function bookTimeSlot() {
     var startTime = document.getElementById("start-time").value;
     var endTime = document.getElementById("end-time").value;
 
-
     var bookedSlot = document.createElement("div");
     bookedSlot.className = "booked-slot";
     bookedSlot.innerHTML = startTime + " - " + endTime + "<br>" + organization;
     document.getElementById("calendar-container").querySelector(":contains('" + selectedDate + "')").appendChild(bookedSlot);
 
-
     document.getElementById("selected-info").style.display = "none";
 }
+
+function closeInfoBox() {
+    document.getElementById("selected-info").style.display = "none";
+}
+function showInfoBox(selectedDateElement) {
+    var infoBox = document.getElementById("selected-info");
+    var selectedDateRect = selectedDateElement.getBoundingClientRect();
+
+ 
+    var infoBoxTop = selectedDateRect.bottom + 5; 
+    var infoBoxLeft = selectedDateRect.left + (selectedDateRect.width / 2) - (infoBox.offsetWidth / 2);
+
+  
+    var maxLeft = document.documentElement.clientWidth - infoBox.offsetWidth;
+    if (infoBoxLeft < 0) {
+        infoBoxLeft = 0;
+    } else if (infoBoxLeft > maxLeft) {
+        infoBoxLeft = maxLeft;
+    }
+    infoBox.style.display = "block";
+    infoBox.style.position = "absolute";
+    infoBox.style.top = infoBoxTop + "100px"; 
+    infoBox.style.left = infoBoxLeft + "px";
+    infoBox.style.transform = "translateY(30px)"; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
