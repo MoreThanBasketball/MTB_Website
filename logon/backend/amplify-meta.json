@@ -1,0 +1,58 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mtb-dev-267e2-authRole",
+      "UnauthRoleArn": "arn:aws:iam::471112567454:role/amplify-mtb-dev-267e2-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::471112567454:role/amplify-mtb-dev-267e2-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mtb-dev-267e2-deployment",
+      "UnauthRoleName": "amplify-mtb-dev-267e2-unauthRole",
+      "StackName": "amplify-mtb-dev-267e2",
+      "StackId": "arn:aws:cloudformation:us-east-1:471112567454:stack/amplify-mtb-dev-267e2/ffd4ea20-f634-11ee-bff5-0ebe575548f9",
+      "AmplifyAppId": "d35u4rsi9q8t2v"
+    }
+  },
+  "auth": {
+    "mtbcb25086c": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mtb-dev-267e2-deployment/amplify-cfn-templates/auth/mtbcb25086c-cloudformation-template.json",
+        "logicalId": "authmtbcb25086c"
+      },
+      "lastPushTimeStamp": "2024-04-09T05:58:28.617Z",
+      "output": {
+        "UserPoolId": "us-east-1_FwXshyTlx",
+        "AppClientIDWeb": "51i2fu9lu3ubhf82ebk2p5c6i3",
+        "AppClientID": "8okthu582bpkrdoc4q78msrmm",
+        "IdentityPoolId": "us-east-1:30089330-0341-4488-8aaf-7f7c9fd96784",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:471112567454:userpool/us-east-1_FwXshyTlx",
+        "IdentityPoolName": "mtbcb25086c_identitypool_cb25086c__dev",
+        "UserPoolName": "mtbcb25086c_userpool_cb25086c"
+      },
+      "lastPushDirHash": "CQLOjZQIOH3DT4XniXv2aFf9+/A="
+    }
+  }
+}
