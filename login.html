@@ -22,6 +22,7 @@
         </nav>
     </header>
 
+
     <div class="wrapper">
         <div class="form-box login">
         <h2>Login</h2>
@@ -52,6 +53,9 @@
         <div class="form-box register">
         <h2>Registration</h2>
         <form action="#">
+            <script type="text/babel">
+                ReactDOM.render(<WelcomeBack />, document.querySelector(".welcome-back"));
+              </script>
             <div class="input-box">
                 <span class="icon"><ion-icon name="person"></ion-icon></span>
                 <input type="text" required>
@@ -79,10 +83,37 @@
         </div>
     </div>
 
+ 
+    <body>
+        <div class="container">
+          <h1></h1>
+          <div class="welcome-back"></div>
+        </div>
+    
+        <script
+          src="https://unpkg.com/react@16/umd/react.production.min.js"
+          crossorigin
+        ></script>
+        <script
+          src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+          crossorigin
+        ></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <script type="text/babel" src="WelcomeBack.js"></script>
+        <script type="text/babel" src="CoolButton.js"></script>
+    
+        <script type="text/babel">
+          ReactDOM.render(<WelcomeBack />, document.querySelector(".welcome-back"));
+        </script>
+      </body>
+      
 
     <script src="login.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
 </body>
 
 </html>
